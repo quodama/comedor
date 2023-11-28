@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!-- Tree view for "sis.comedor.asistencia" -->
+        <record id="sis_comedor_asistencia_tree" model="ir.ui.view">
+            <field name="name">Asistencias Comedor</field>
+            <field name="model">sis.comedor.asistencia</field>
+            <field name="type">tree</field>
+            <field name="mode">primary</field>
+            <field name="priority" eval="16" />
+            <field name="active" eval="True" />
+            <field name="arch" type="xml">
+                <tree string="sis_comedor_asistencia_tree" create="true" delete="true" edit="true">
+                    <field name="fecha" string="Fecha" group="month" />
+                    <field name="nota" string="Nota"/>
+                    <field name="beneficiarios_ids" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view for "sis.comedor.asistencia" -->
+        <record id="sis_comedor_asistencia_form" model="ir.ui.view">
+            <field name="name">Asistencia Comedor</field>
+            <field name="model">sis.comedor.asistencia</field>
+            <field name="type">form</field>
+            <field name="mode">primary</field>
+            <field name="priority" eval="16" />
+            <field name="active" eval="True" />
+            <field name="arch" type="xml">
+                <form string="Asistencia Comedor" create="true" delete="true" edit="true">
+                    <header>
+                        
+                    </header>
+                    <sheet>
+                        <field name="fecha" string="Fecha" />
+                        <field name="nota" string="Nota"/>
+                        <notebook>
+                            <page string="Beneficiarios">
+                                <field name="beneficiarios_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="identificacion"/>
+                                        <field name="nacionalidad" />
+                                        <field name="permanente" />
+                                        <field name="verificado" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search view for "sis.comedor.asistencia" -->
+        <record id="sis_comedor_asistencia_search" model="ir.ui.view">
+            <field name="name">Buscar Asistencias</field>
+            <field name="model">sis.comedor.asistencia</field>
+            <field name="type">search</field>
+            <field name="mode">primary</field>
+            <field name="priority" eval="16" />
+            <field name="active" eval="True" />
+            <field name="arch" type="xml">
+                <search string="sis_comedor_asistencia_search">
+                    <field name="fecha" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Main window action for "sis.comedor.asistencia" -->
+        <record id="action_sis_comedor_asistencia" model="ir.actions.act_window">
+            <field name="type">ir.actions.act_window</field>
+            <field name="name">Asistencia Comedor</field>
+            <field name="res_model">sis.comedor.asistencia</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="sis_comedor_asistencia_search" />
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to add new asistencia comedor
+                </p>
+                <p>
+                Something about sis.comedor.asistencia
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Asistencia" id="menu_asistencia" parent="dgi_menu_comedor" action="action_sis_comedor_asistencia" sequence="1"/>
+
+    </data>
+</odoo>

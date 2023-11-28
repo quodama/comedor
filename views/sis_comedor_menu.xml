@@ -1,0 +1,8 @@
+<odoo>
+  <data>
+    <!-- Top menu item -->
+    <menuitem name="Comedor Solidario" id="dgi_menu_comedor" />
+    <!-- Top subMenu item -->
+    <menuitem name="Registro" id="menu_beneficiarios" parent="dgi_menu_comedor" />
+  </data>
+</odoo>

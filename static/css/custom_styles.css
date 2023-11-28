@@ -1,0 +1,14 @@
+/* Ejemplo de CSS personalizado */
+.oe_column1 {
+    float: left;
+    width: 50%; /* El 50% del ancho para cada columna */
+    padding-right: 10px; /* Espacio entre las columnas */
+    box-sizing: border-box;
+}
+
+.oe_column2 {
+    float: left;
+    width: 50%;
+    padding-left: 10px; /* Espacio entre las columnas */
+    box-sizing: border-box;
+}

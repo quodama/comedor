@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+    
+        <record id="administracion_comedor" model="ir.module.category">
+            <field name="name">Sistema Comedor Solidario</field>
+            <field name="description">Sistema Comedor Solidario</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="group_dgi_usuario" model="res.groups">
+            <field name="name">Administrador Comedor</field>
+            <field name="category_id" ref="administracion_comedor"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">Administrador Comedor</field>
+        </record>
+
+         </data>
+</odoo>

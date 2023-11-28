@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="indice_principal" model="uaw.core.catalogos.categoria">
+            <field name="category">Índice principal</field>
+            <field name="active">True</field>
+        </record>
+        <record id="estado_documento" model="uaw.core.catalogos.categoria">
+            <field name="category">Estado del documento</field>
+            <field name="active">True</field>
+        </record>
+        <record id="tipo_documento" model="uaw.core.catalogos.categoria">
+            <field name="category">Tipo del documento</field>
+            <field name="active">True</field>
+        </record>
+        <record id="documento_evidencia" model="uaw.core.catalogos.categoria">
+            <field name="category">Documento de evidencia</field>
+            <field name="active">True</field>
+        </record>               
+    </data>
+</odoo>

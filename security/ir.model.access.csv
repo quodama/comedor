@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sis_comedor_beneficiario,access_sis_comedor_beneficiario,model_sis_comedor_beneficiario,base.group_user,1,1,1,1
+
+access_sis_comedor_asistencia,access_sis_comedor_asistencia,model_sis_comedor_asistencia,base.group_user,1,1,1,1
